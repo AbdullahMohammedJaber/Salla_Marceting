@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "731056226673",
+    "project_id": "sallaty-48a22",
+    "storage_bucket": "sallaty-48a22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731056226673:android:81274455cdd78777cc76d0",
+        "android_client_info": {
+          "package_name": "com.example.sallaty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731056226673-s0h19q0uulofe58b23jv6nek444glrus.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVqh7YxI5UxCTEoJkesGLM1veGRCAwcjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731056226673-s0h19q0uulofe58b23jv6nek444glrus.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
