@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:sallaty/Admin/Auth/login.dart';
 import 'package:sallaty/Authentecation/registry.dart';
 import 'package:sallaty/Screen/homelayout.dart';
 import 'package:sallaty/data/Auth/sallaauth_cubit.dart';
@@ -128,8 +129,14 @@ class LoginScreen extends StatelessWidget {
                               color: Colors.black26,
                             ),
                             child: MaterialButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => LoginAdminScreen()));
+                              },
                               child: Text(
-                                'User',
+                                'Admin',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,

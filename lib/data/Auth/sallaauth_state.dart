@@ -35,6 +35,10 @@ class SocialRegistrySuccefully extends SallaauthState {
   SocialRegistrySuccefully(this.userModel);
 }
 
+class SocialLogoutError extends SallaauthState {}
+
+class SocialLogoutSucces extends SallaauthState {}
+
 class SocialRegistryError extends SallaauthState {
   final String massage;
 
@@ -48,3 +52,46 @@ class SocialAddDataUserFireStoreSuccefull extends SallaauthState {
 }
 
 class SocialAddDataUserFireStoreError extends SallaauthState {}
+
+class ShopChangePassword extends SallaauthState {}
+//********************************************************* */
+
+class SocialloginAdminLoaded extends SallaauthState {}
+
+class SocialloginAdminSucceful extends SallaauthState {
+  final String uId;
+
+  SocialloginAdminSucceful(this.uId);
+}
+
+class SocialloginAdminError extends SallaauthState {
+  final String massage;
+
+  SocialloginAdminError(this.massage);
+}
+
+class SocialRegistryAdminLoaded extends SallaauthState {}
+
+class SocialRegistryAdminSuccefully extends SallaauthState {
+  final UserModel userModel;
+
+  SocialRegistryAdminSuccefully(this.userModel);
+}
+
+class SocialRegistryAdminError extends SallaauthState {}
+
+class SocialLogoutAdminError extends SallaauthState {}
+
+class GetDataSucees extends SallaauthState {}
+
+class SocialLogoutAdminSucces extends SallaauthState {}
+
+class SalaaGetDataLoaded extends SallaauthState {}
+
+class SalaaSendMassege extends SallaauthState {}
+
+class SalaaSendData extends SallaauthState {}
+
+class SalaaGetDataError extends SallaauthState {}
+
+class SalaaGetDataSucces extends SallaauthState {}

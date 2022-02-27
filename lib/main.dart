@@ -17,39 +17,39 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
-  await CashHelper.init();
-  uId = CashHelper.getDataApp(key: 'isLogin');
-  bool onBorder = CashHelper.getDataApp(key: 'onBorder');
+  // await CashHelper.init();
+  // uId = CashHelper.getDataApp(key: 'isLogin');
+  // bool onBorder = CashHelper.getDataApp(key: 'onBorder');
 
-  print('the uId is ${uId}');
-  print('thw onBorder is ${onBorder}');
-  Widget testWidget;
-  if (onBorder != null) {
-    if (uId != null) {
-      testWidget = HomeLayout();
-    } else {
-      testWidget = LoginScreen();
-    }
-  } else {
-    testWidget = SplashScreenState();
-  }
+  // print('the uId is ${uId}');
+  // print('thw onBorder is ${onBorder}');
+  // Widget testWidget;
+  // if (onBorder != null) {
+  //   if (uId != null) {
+  //     testWidget = HomeLayout();
+  //   } else {
+  //     testWidget = LoginScreen();
+  //   }
+  // } else {
+  //   testWidget = SplashScreenState();
+  // }
   runApp(MyApp(
-    testWidget: testWidget,
-  ));
+      // testWidget: testWidget,
+      ));
 }
 
 class MyApp extends StatelessWidget {
-  final Widget testWidget;
-  MyApp({
-    @required this.testWidget,
-  });
+  // final Widget testWidget;
+  // MyApp({
+  //   @required this.testWidget,
+  // });
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (BuildContext context) => SallaauthCubit(),
+          create: (BuildContext context) => SallaauthCubit()..GetAllUser(),
         ),
         BlocProvider(
           create: (BuildContext context) => SallaappCubit()..fetchProducts(),
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.green,
         ),
-        home: testWidget,
+        home: SplashScreenState(),
         routes: {
           //   '/': (ctx) => LandingPage(),
 

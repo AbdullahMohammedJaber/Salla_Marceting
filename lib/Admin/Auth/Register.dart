@@ -3,11 +3,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:sallaty/Admin/Screens/homeLayout.dart';
 import 'package:sallaty/Screen/homelayout.dart';
 import 'package:sallaty/data/Auth/sallaauth_cubit.dart';
 import 'package:sallaty/helper/const.dart';
 
-class RegistryScreen extends StatelessWidget {
+class RegistryAdinScreen extends StatelessWidget {
   var passwordController = TextEditingController();
   var emailController = TextEditingController();
   var passwordnController = TextEditingController();
@@ -22,7 +23,7 @@ class RegistryScreen extends StatelessWidget {
           toastLength: Toast.LENGTH_LONG,
           gravity: ToastGravity.CENTER,
           timeInSecForIosWeb: 1,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.pink,
           textColor: Colors.white,
           fontSize: 16.0,
         );
@@ -30,7 +31,7 @@ class RegistryScreen extends StatelessWidget {
         Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeLayout(),
+              builder: (context) => HomeLayoutAdmin(),
             ),
             (route) => false);
       }
@@ -115,7 +116,7 @@ class RegistryScreen extends StatelessWidget {
                         );
                       }
                     },
-                    color: Colors.green,
+                    color: Colors.pink,
                     textColor: Colors.white,
                     child: Padding(
                       padding: EdgeInsets.symmetric(

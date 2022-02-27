@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sallaty/Screen/favorait.dart';
 import 'package:sallaty/Screen/upload_product.dart';
 import 'package:sallaty/data/Salla/sallaapp_cubit.dart';
 import 'package:sallaty/helper/icon.dart';
 
-class HomeLayout extends StatelessWidget {
+class HomeLayoutAdmin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SallaappCubit, SallaappState>(
@@ -28,11 +27,11 @@ class HomeLayout extends StatelessWidget {
               actions: [
                 IconButton(
                   onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => Favorait()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => UploadProductForm()));
                   },
-                  icon: Icon(IconBroken.Heart),
-                  color: Colors.red,
+                  icon: Icon(IconBroken.Upload),
+                  color: Colors.black,
                 ),
                 IconButton(
                   onPressed: () {},
@@ -41,14 +40,14 @@ class HomeLayout extends StatelessWidget {
                 ),
               ],
             ),
-            body: home.Screen[home.currentIndex],
+            body: home.Admin[home.currentIndex],
             bottomNavigationBar: BottomNavigationBar(
               backgroundColor: Colors.grey,
               onTap: (index) {
                 home.ChangeNav(index);
               },
               currentIndex: home.currentIndex,
-              selectedItemColor: Colors.green,
+              selectedItemColor: Colors.pink,
               unselectedItemColor: Colors.black,
               items: [
                 BottomNavigationBarItem(
@@ -60,12 +59,12 @@ class HomeLayout extends StatelessWidget {
                   label: 'feeds',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(IconBroken.Location),
-                  label: 'Map',
+                  icon: Icon(IconBroken.Category),
+                  label: 'my feeds',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.wallet_giftcard_rounded),
-                  label: 'point',
+                  icon: Icon(IconBroken.Message),
+                  label: 'chat',
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(IconBroken.Setting),

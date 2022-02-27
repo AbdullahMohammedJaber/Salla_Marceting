@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class FavsAttr {
-  final String id;
-  final String title;
-  final double price;
-  final String imageUrl;
+  String id;
+  String title;
+  double price;
+  String imageUrl;
 
   FavsAttr({this.id, this.title, this.price, this.imageUrl});
+  FavsAttr.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    title = json['title'];
+    price = json['price'];
+    imageUrl = json['imageUrl'];
+  }
 }

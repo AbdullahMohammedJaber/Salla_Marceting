@@ -99,13 +99,35 @@ class ProductDetails extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Text(
-                    '${prodAttr.price}\$',
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                  Row(
+                    children: [
+                      Text(
+                        '${prodAttr.price}\$',
+                        style: TextStyle(
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      Spacer(),
+                      IconButton(
+                        onPressed: () {
+                          SallaappCubit.get(context).addAndRemoveFromFav(
+                            prodAttr.id,
+                            prodAttr.title,
+                            prodAttr.imageUrl,
+                            prodAttr.price,
+                          );
+                        },
+                        icon: Icon(Icons.favorite_border),
+                        color: Colors.red,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(IconBroken.Buy),
+                        color: Colors.green,
+                      ),
+                    ],
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),

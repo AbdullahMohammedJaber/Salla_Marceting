@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sallaty/Admin/Screens/chat_Details.dart';
 import 'package:sallaty/data/Auth/sallaauth_cubit.dart';
 
-class GiftScreen extends StatelessWidget {
-  const GiftScreen({Key key}) : super(key: key);
+class chat extends StatelessWidget {
+  const chat({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
